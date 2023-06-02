@@ -1718,7 +1718,7 @@ def main():
     # Training
     # train(local_rank, output_dir, name, train_batch_size, eval_batch_size, seed, n_gpu, gradient_accumulation_steps, dataset, img_size, learning_rate, weight_decay, num_steps, decay_type, warmup_steps, fp16, fp16_opt_level, device, max_grad_norm, eval_every, model)
     # sens_mlp_cal(model,loss,val_loader,device)
-
+    print(123)
 
 if __name__ == '__main__':
     main()
