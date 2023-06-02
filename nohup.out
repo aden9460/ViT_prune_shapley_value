@@ -1,0 +1,277 @@
+2023-05-19 21:11:32.272970: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-19 21:11:32.425225: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-05-19 21:11:33.201863: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib/python3.8/site-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-05-19 21:11:33.201953: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib/python3.8/site-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-05-19 21:11:33.201965: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+05/19/2023 21:11:35 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: 0
+05/19/2023 21:11:40 - INFO - __main__ - classifier: token
+hidden_size: 768
+patches:
+  size: !!python/tuple
+  - 16
+  - 16
+representation_size: null
+transformer:
+  attention_dropout_rate: 0.0
+  dropout_rate: 0.1
+  mlp_dim: 3072
+  num_heads: 12
+  num_layers: 12
+
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 1081, in emit
+    msg = self.format(record)
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 925, in format
+    return fmt.format(record)
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 664, in format
+    record.message = record.getMessage()
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "main_net/main_basic.py", line 1317, in <module>
+    main()
+  File "main_net/main_basic.py", line 1281, in main
+    model_type, img_size, pretrained_dir, device, model = setup(model_type, img_size, pretrained_dir, device, dataset)
+  File "main_net/main_basic.py", line 631, in setup
+    logger.info("Training parameters %s", model_type, img_size, pretrained_dir, device)
+Message: 'Training parameters %s'
+Arguments: ('ViT-B_16', 224, '/workspace/CICC-main/experiments train - using/Vision-Transformer-main/ViT-B_16.npz', device(type='cuda'))
+05/19/2023 21:11:40 - INFO - __main__ - Total Parameter: 	85.8M
+05/19/2023 21:11:40 - INFO - __main__ - FLOPs:8.439803568G,params:85.654282M
+05/19/2023 21:11:41 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+GPU:  NVIDIA GeForce RTX 3090
+GPU:  NVIDIA GeForce RTX 3090
+using_gpu4
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register count_softmax() for <class 'torch.nn.modules.activation.Softmax'>.
+2023-05-19 21:16:47.101695: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-19 21:16:47.250250: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-05-19 21:16:48.024199: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib/python3.8/site-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-05-19 21:16:48.024291: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib/python3.8/site-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-05-19 21:16:48.024301: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+05/19/2023 21:16:50 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: 0
+05/19/2023 21:16:55 - INFO - __main__ - classifier: token
+hidden_size: 768
+patches:
+  size: !!python/tuple
+  - 16
+  - 16
+representation_size: null
+transformer:
+  attention_dropout_rate: 0.0
+  dropout_rate: 0.1
+  mlp_dim: 3072
+  num_heads: 12
+  num_layers: 12
+
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 1081, in emit
+    msg = self.format(record)
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 925, in format
+    return fmt.format(record)
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 664, in format
+    record.message = record.getMessage()
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "main_net/main_basic.py", line 1317, in <module>
+    main()
+  File "main_net/main_basic.py", line 1281, in main
+    model_type, img_size, pretrained_dir, device, model = setup(model_type, img_size, pretrained_dir, device, dataset)
+  File "main_net/main_basic.py", line 631, in setup
+    logger.info("Training parameters %s", model_type, img_size, pretrained_dir, device)
+Message: 'Training parameters %s'
+Arguments: ('ViT-B_16', 224, '/workspace/CICC-main/experiments train - using/Vision-Transformer-main/ViT-B_16.npz', device(type='cuda'))
+05/19/2023 21:16:55 - INFO - __main__ - Total Parameter: 	85.8M
+05/19/2023 21:16:55 - INFO - __main__ - FLOPs:8.439803568G,params:85.654282M
+05/19/2023 21:16:56 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+GPU:  NVIDIA GeForce RTX 3090
+GPU:  NVIDIA GeForce RTX 3090
+using_gpu4
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register count_softmax() for <class 'torch.nn.modules.activation.Softmax'>.
+05/19/2023 21:47:02 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/19/2023 22:17:28 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/19/2023 22:47:41 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/19/2023 22:49:54 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count1
+05/19/2023 23:20:10 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/19/2023 23:50:30 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 00:20:49 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 00:23:02 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count2
+05/20/2023 00:53:26 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/20/2023 01:23:48 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 01:54:11 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 01:56:24 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count3
+05/20/2023 02:26:56 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/20/2023 02:57:28 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 03:27:58 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 03:30:12 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count4
+05/20/2023 04:00:57 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/20/2023 04:31:41 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 05:02:20 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 05:04:35 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count5
+05/20/2023 05:35:28 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/20/2023 06:06:23 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 06:37:21 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 06:39:36 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count6
+05/20/2023 07:10:43 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/20/2023 07:41:50 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 08:12:58 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 08:15:15 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count7
+05/20/2023 08:46:36 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/20/2023 09:17:58 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 09:49:17 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 09:51:33 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count8
+05/20/2023 10:22:58 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/20/2023 10:54:31 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 11:26:03 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 11:28:21 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count9
+05/20/2023 12:00:00 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/20/2023 12:31:39 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 13:03:53 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 13:06:11 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count10
+05/20/2023 13:38:55 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:1000
+05/20/2023 14:12:26 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:2000
+05/20/2023 14:44:19 - INFO - torchpruner.attributions.methods.shapley_values - cal_sha_count:3000
+05/20/2023 14:46:38 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+cal_count11
+ 2023-05-20 22:08:51.340003: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-20 22:08:52.346619: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-05-20 22:08:57.155146: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib/python3.8/site-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-05-20 22:08:57.155513: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib/python3.8/site-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-05-20 22:08:57.155548: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+05/20/2023 22:09:08 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: 0
+05/20/2023 22:09:23 - INFO - __main__ - classifier: token
+hidden_size: 768
+patches:
+  size: !!python/tuple
+  - 16
+  - 16
+representation_size: null
+transformer:
+  attention_dropout_rate: 0.0
+  dropout_rate: 0.1
+  mlp_dim: 3072
+  num_heads: 12
+  num_layers: 12
+
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 1081, in emit
+    msg = self.format(record)
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 925, in format
+    return fmt.format(record)
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 664, in format
+    record.message = record.getMessage()
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "main_net/main_basic.py", line 1399, in <module>
+    main()
+  File "main_net/main_basic.py", line 1362, in main
+    model_type, img_size, pretrained_dir, device, model = setup(model_type, img_size, pretrained_dir, device, dataset)
+  File "main_net/main_basic.py", line 631, in setup
+    logger.info("Training parameters %s", model_type, img_size, pretrained_dir, device)
+Message: 'Training parameters %s'
+Arguments: ('ViT-B_16', 224, '/workspace/CICC-main/experiments train - using/Vision-Transformer-main/ViT-B_16.npz', device(type='cuda'))
+05/20/2023 22:09:23 - INFO - __main__ - Total Parameter: 	85.8M
+05/20/2023 22:09:23 - INFO - __main__ - FLOPs:8.439803568G,params:85.654282M
+05/20/2023 22:09:25 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+GPU:  NVIDIA GeForce RTX 3090
+GPU:  NVIDIA GeForce RTX 3090
+using_gpu4
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register count_softmax() for <class 'torch.nn.modules.activation.Softmax'>.
+2023-05-20 22:37:18.299173: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-20 22:37:18.449284: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-05-20 22:37:19.325373: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib/python3.8/site-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-05-20 22:37:19.325483: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib/python3.8/site-packages/cv2/../../lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
+2023-05-20 22:37:19.325495: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+05/20/2023 22:37:21 - WARNING - __main__ - Process rank: -1, device: cuda, n_gpu: 4, distributed training: False, 16-bits training: 0
+05/20/2023 22:37:27 - INFO - __main__ - classifier: token
+hidden_size: 768
+patches:
+  size: !!python/tuple
+  - 16
+  - 16
+representation_size: null
+transformer:
+  attention_dropout_rate: 0.0
+  dropout_rate: 0.1
+  mlp_dim: 3072
+  num_heads: 12
+  num_layers: 12
+
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 1081, in emit
+    msg = self.format(record)
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 925, in format
+    return fmt.format(record)
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 664, in format
+    record.message = record.getMessage()
+  File "/usr/local/lib/python3.8/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "main_net/main_basic.py", line 1400, in <module>
+    main()
+  File "main_net/main_basic.py", line 1363, in main
+    model_type, img_size, pretrained_dir, device, model = setup(model_type, img_size, pretrained_dir, device, dataset)
+  File "main_net/main_basic.py", line 631, in setup
+    logger.info("Training parameters %s", model_type, img_size, pretrained_dir, device)
+Message: 'Training parameters %s'
+Arguments: ('ViT-B_16', 224, '/workspace/CICC-main/experiments train - using/Vision-Transformer-main/ViT-B_16.npz', device(type='cuda'))
+05/20/2023 22:37:27 - INFO - __main__ - Total Parameter: 	85.8M
+05/20/2023 22:37:27 - INFO - __main__ - FLOPs:8.439803568G,params:85.654282M
+05/20/2023 22:37:28 - WARNING - root - Consider adding a 'forward_partial' method to your model to speed-up Shapley values computation
+GPU:  NVIDIA GeForce RTX 3090
+GPU:  NVIDIA GeForce RTX 3090
+using_gpu4
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+[INFO] Register count_softmax() for <class 'torch.nn.modules.activation.Softmax'>.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/multiprocessing/resource_sharer.py", line 142, in _serve
+    with self._listener.accept() as conn:
+  File "/usr/local/lib/python3.8/multiprocessing/connection.py", line 465, in accept
+    deliver_challenge(c, self._authkey)
+  File "/usr/local/lib/python3.8/multiprocessing/connection.py", line 739, in deliver_challenge
+    response = connection.recv_bytes(256)        # reject large message
+  File "/usr/local/lib/python3.8/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/usr/local/lib/python3.8/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/lib/python3.8/multiprocessing/connection.py", line 383, in _recv
+    raise EOFError
+EOFError
